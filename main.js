@@ -167,7 +167,7 @@ console.log("el jugador " + jugadores[0].nombre + " es de nivel " + jugadores[0]
 const personajesFuertes = personajes.filter((jugadores) => {
   return jugadores.nivel >= 3;
 });
-console.log("los personajes fuertes son: " + personajesFuertes);
+console.log(personajesFuertes);
 
 //Ejercicio 20
 const nombres = personajes.map((jugadores) => {
@@ -180,7 +180,7 @@ const personajeEncontrado = personajes.find((jugadores) => {
   return jugadores.nombre === "Kai";
 });
 
-console.log("el personaje encontrado es: " + personajeEncontrado);
+console.log(personajeEncontrado);
 
 //Ejercicio 22
 const vidatotal = personajes.reduce((acumulador, jugadores) => {
