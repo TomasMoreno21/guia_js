@@ -159,4 +159,71 @@ const jugadores = [
  { nombre: "Nina", vida: 90, tipo: "arquera", nivel: 2 }
 ];
 console.log("el jugador " + jugadores[0].nombre + " es de nivel " + jugadores[0].nivel);
-  
+
+//Ejercicio 19
+const personajesFuertes = personajes.filter((jugadores) => {
+  return jugadores.nivel >= 3;
+});
+console.log(personajesFuertes);
+
+//Ejercicio 20
+const nombres = personajes.map((jugadores) => {
+  return jugadores.nombre;
+});
+console.log(nombres);
+
+//ejercicio 21
+const personajeEncontrado = personajes.find((jugadores) => {
+  return jugadores.nombre === "Kai";
+});
+
+console.log(personajeEncontrado);
+
+//Ejercicio 22
+const vidatotal = personajes.reduce((acumulador, jugadores) => {
+  return acumulador + jugadores.vida;
+}, 0);
+
+console.log(vidatotal);
+
+//Ejercicio 23
+const mensajeElement = document.getElementById("mensaje");
+
+mensajeElement.textContent = "Bienvenido a la guía de JavaScript";
+
+//Ejercicio 24
+const boton24 = document.getElementById("btn");
+const mensaje24 = document.getElementById("mensaje");
+
+let puntos = 0;
+
+boton24.addEventListener("click", function () {
+  puntos+= 10;
+  mensaje24.textContent = "Puntos: " + puntos;
+});
+
+//Ejercicio 25
+const input25 = document.getElementById("dato");
+const boton25 = document.getElementById("btn");
+const mensaje25 = document.getElementById("mensaje");
+
+boton25.addEventListener("click", function () {
+  if (input25.value === "") {
+    mensaje25.textContent = "ingrese su nombre";
+  } else {
+    mensaje25.textContent = "bienvenido: " + input25.value;
+  }
+});
+
+//Ejercicio 26
+const jugador4 = {
+ nombre: "Luna",
+ puntaje: 1500
+};
+
+localStorage.setItem("datosjugador", JSON.stringify(jugador4));
+
+const datosGuardados = localStorage.getItem("datosjugador");
+const jugadorRecuperado = JSON.parse(datosGuardados);
+
+console.log(jugadorRecuperado);
