@@ -2,18 +2,18 @@ console.log("Guía JavaScript iniciada");
 // Ejercicio 1
 let nombre = "Tomás";
 let edad = 19;
-let vida = 50;
+let vida = 100;
 let puntaje = 0;
 let activo = true;
 
-console.log(nombre, edad, vida, puntaje, activo);
+console.log("los datos del jugador son: " + nombre + ", " + edad + ", " + vida + ", " + puntaje + ", " + activo);
 
 //Ejercicio 2
 let puntosbase = 100;
 let bonus = 50;
 let penalizacion = 20;
 let puntosfinales = puntosbase + bonus - penalizacion;
-console.log(puntosfinales);
+console.log("los puntos finales son: " + puntosfinales);
 
 //Ejercicio 3
 const input = document.getElementById("dato");
@@ -35,7 +35,7 @@ if (edad >= 13) {
 }
 
 //Ejercicio 5
-if (vida === 0) {
+if (vida <= 0) {
   console.log("Game Over");
 } else if (vida >= 1 && vida <= 29) {
   console.log("jugador en peligro");
@@ -69,24 +69,27 @@ for (let i = 10; i >= 1; i--) {
 }
 
 //Ejercicio 8
+const puntosPorRonda = [15, 25, 10, 30]; // Puntos diferentes para cada ronda
 let puntajeTotal = 0;
 
-for (let ronda = 1; ronda < 5; ronda++) {
- puntajeTotal += ronda + 10;
+for (let i = 0; i < puntosPorRonda.length; i++) {
+  puntajeTotal += puntosPorRonda[i];
 }
 
-console.log(puntajeTotal);
+console.log("la puntuación total es: " + puntajeTotal);
+
+
 
 //Ejercicio 9
 const inventario = ["espada", "poción", "llave", "escudo", "mapa"];
-console.log(inventario[1]);
-console.log(inventario[4]);
-console.log(inventario.length);
+console.log("el segundo elemento del inventario es: " + inventario[1]);
+console.log("el último elemento del inventario es: " + inventario[4]);
+console.log("la longitud del inventario es: " + inventario.length);
 
 //Ejercicio 10
 const inventario2 = ["espada", "poción", "llave", "escudo"];
 for (let i = 0; i < inventario2.length; i++) {
-  console.log(inventario2[i]);
+  console.log("el elemento " + (i + 1) + " del inventario es: " + inventario2[i]);
 }
 
 //Ejercicio 11
@@ -164,32 +167,33 @@ console.log("el jugador " + jugadores[0].nombre + " es de nivel " + jugadores[0]
 const personajesFuertes = personajes.filter((jugadores) => {
   return jugadores.nivel >= 3;
 });
-console.log(personajesFuertes);
+console.log("los personajes fuertes son: " + personajesFuertes);
 
 //Ejercicio 20
 const nombres = personajes.map((jugadores) => {
   return jugadores.nombre;
 });
-console.log(nombres);
+console.log("los nombres de los jugadores son: " + nombres);
 
 //ejercicio 21
 const personajeEncontrado = personajes.find((jugadores) => {
   return jugadores.nombre === "Kai";
 });
 
-console.log(personajeEncontrado);
+console.log("el personaje encontrado es: " + personajeEncontrado);
 
 //Ejercicio 22
 const vidatotal = personajes.reduce((acumulador, jugadores) => {
   return acumulador + jugadores.vida;
 }, 0);
 
-console.log(vidatotal);
+console.log("la vida total de todos los jugadores es: " + vidatotal);
 
 //Ejercicio 23
 const mensajeElement = document.getElementById("mensaje");
 
 mensajeElement.textContent = "Bienvenido a la guía de JavaScript";
+mensajeElement.style.color = "red";
 
 //Ejercicio 24
 const boton24 = document.getElementById("btn");
