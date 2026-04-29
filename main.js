@@ -107,3 +107,56 @@ if (inventario3.includes("llave")) {
   console.log("necesitas una llave");
 }
 
+//Ejercicio 13
+function saludarUsuario(nombre) {
+  console.log("Hola, " + nombre);
+}
+
+saludarUsuario("Tomás");
+
+//Ejercicio 14
+function calcularVidaRestante(vida, danio) {
+  return vida - danio;
+}
+
+let resultado = calcularVidaRestante(100, 30);
+console.log(resultado);
+
+//Ejercicio 15
+const sumar = (a, b) => {
+ return a + b;
+};
+
+console.log(sumar(10, 5));
+
+//Ejercicio 16
+const jugador = {
+ nombre: "Luna",
+ vida: 100,
+ energia: 80,
+ nivel: 1,
+ inventario: ["espada", "poción"]
+};
+console.log(jugador.nombre, jugador.vida, jugador.energia, jugador.nivel, jugador.inventario);
+
+//Ejercicio 17
+const jugador2 = {
+ nombre: "Kai",
+ nivel: 1,
+ monedas: 0
+};
+function subirnivel(jugador2) {
+  jugador2.nivel += 1;
+  jugador2.monedas += 50;
+}
+subirnivel(jugador2);
+console.log(jugador2);
+
+//Ejercicio 18
+const jugadores = [
+ { nombre: "Luna", vida: 100, tipo: "maga", nivel: 3 },
+ { nombre: "Kai", vida: 120, tipo: "guerrero", nivel: 4 },
+ { nombre: "Nina", vida: 90, tipo: "arquera", nivel: 2 }
+];
+console.log("el jugador " + jugadores[0].nombre + " es de nivel " + jugadores[0].nivel);
+  
